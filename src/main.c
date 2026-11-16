@@ -1,6 +1,11 @@
-#include <syscall.h>
+#include <system.h>
+#include <iotools.h>
 
-void main(void) {
-	syscall(1, 0, (long)"Hello!\n", 7);
-	syscall(1, 0, (long)"Hello!!!\n", 9);
+void _start(void) {
+	print("Hello");
+	print("World");
+
+	print("I can print things now");
+
+	exit(0);
 }
